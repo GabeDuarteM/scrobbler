@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "outDir": "dist",
+    "lib": ["esnext", "dom"],
+    "module": "none",
+    "sourceMap": true,
+    "strict": true,
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noEmitOnError": true,
+    "pretty": true,
+    "typeRoots": ["./node_modules/@types/", "./src/@types"]
+  },
+  "exclude": ["node_modules"]
+}
