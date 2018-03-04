@@ -1,4 +1,4 @@
-import { error, info } from "../../utils/logger"
+import { error } from "../../utils/logger"
 import { trakt } from "./trakt"
 
 class Api {
@@ -12,21 +12,26 @@ class Api {
   // tslint:disable-next-line readonly-keyword
   private watched = false
 
+  public readonly clearVideoInfo = () => {
+    // tslint:disable-next-line no-object-mutation
+    this.videoToScrobbleTrakt = null
+    // tslint:disable-next-line no-object-mutation
+    this.watched = false
+  }
   public readonly watchIfNecessary = async (
     name: string,
     progress: number,
-    season: number,
-    episode: number,
+    season?: number,
+    episode?: number,
   ) => {
     if (progress < this.percentageToConsiderWatched || this.watched) {
       return
     }
+    await this.stop(name, progress, season, episode)
     // tslint:disable-next-line no-object-mutation
     this.watched = true
-    await this.stop(name, progress, season, episode)
     // tslint:disable-next-line no-floating-promises
     this.start(name, progress, season, episode)
-    info("timeupdate")
   }
 
   public readonly start = async (
@@ -112,7 +117,7 @@ class Api {
             season as number,
             episode as number,
           )
-        : video),
+        : video.movie),
       type: video.type === "show" ? "episode" : video.type,
     }
 

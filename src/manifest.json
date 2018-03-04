@@ -25,7 +25,7 @@
     "tabs",
     "storage",
     "*://*.crunchyroll.com/*",
-    "*://*.netflix.com/watch/*",
+    "*://*.netflix.com/*",
     "*://*.trakt.tv/*"
   ],
   "content_scripts": [
