@@ -1,0 +1,58 @@
+#mainPopup {
+  padding: 10px;
+  height: 200px;
+  width: 400px;
+  font-family: Roboto, Helvetica, Ubuntu, Arial, sans-serif;
+  font-size: 12px;
+}
+
+.btn {
+  box-shadow: none;
+  background-color: transparent;
+  color: #343434;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  outline: 0;
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.13em;
+  user-select: none;
+  text-decoration: none;
+}
+
+.login {
+  background-color: #009688;
+  width: 100%;
+  color: white;
+}
+
+.login:hover {
+  background-color: #00897b;
+}
+
+.login:active {
+  background-color: #00796b;
+}
+
+.logout {
+  background-color: #d32f2f;
+  width: 100%;
+  color: white;
+}
+
+.logout:hover {
+  background-color: #c62828;
+}
+
+.logout:active {
+  background-color: #b71c1c;
+}

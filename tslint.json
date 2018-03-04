@@ -50,6 +50,7 @@
     "no-var-keyword": true,
     "no-parameter-reassignment": true,
     "typedef": [true, "call-signature"],
+    "object-literal-sort-keys": false,
 
     /**
      * Enables tslint-plugin-prettier
@@ -63,7 +64,6 @@
 
     "readonly-keyword": true,
     "readonly-array": true,
-    "no-let": true,
     "no-object-mutation": true,
     "no-method-signature": true,
     "no-delete": true,

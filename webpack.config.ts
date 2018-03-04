@@ -5,7 +5,7 @@ import * as webpack from "webpack"
 
 const baseConfig: webpack.Configuration = {
   entry: {
-    background: join(__dirname, "src", "background", "background.ts"),
+    authSuccess: join(__dirname, "src", "authSuccess", "authSuccess.ts"),
     crunchyroll: join(__dirname, "src", "inject", "crunchyroll.ts"),
     netflix: join(__dirname, "src", "inject", "netflix.ts"),
     popup: join(__dirname, "src", "popup", "popup.ts"),
@@ -27,10 +27,11 @@ const baseConfig: webpack.Configuration = {
   plugins: [
     new CopyWebpackPlugin([
       { from: join("src", "icons"), to: "icons" },
-      { from: join("src", "page_action"), to: "page_action" },
       { from: join("src", "manifest.json") },
       { from: join("src", "popup", "popup.html") },
       { from: join("src", "popup", "popup.css") },
+      { from: join("src", "authSuccess", "authSuccess.html") },
+      { from: join("src", "authSuccess", "authSuccess.css") },
     ]),
     new ForkTsCheckerWebpackPlugin({}),
   ],
