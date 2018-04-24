@@ -2,7 +2,10 @@ import * as Trakt from "trakt.tv"
 import { trakt as traktSecrets } from "./secrets"
 
 const options = {
-  api_url: "https://api.trakt.tv",
+  api_url:
+    process.env.NODE_ENV === "development"
+      ? "https://api-staging.trakt.tv"
+      : "https://api.trakt.tv",
   client_id: traktSecrets.clientId,
   client_secret: traktSecrets.clientSecret,
   redirect_uri:

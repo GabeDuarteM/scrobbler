@@ -10,7 +10,7 @@
     "prebuild": "rimraf dist",
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
-    "build:ci": "yarn lint && yarn test:cov && yarn build",
+    "ci": "yarn lint && yarn test:cov && yarn build",
     "start": "yarn build:dev -w",
     "lint": "yarn tslint -p tsconfig.json -t code-frame",
     "lint:fix": "yarn lint --fix",
@@ -28,7 +28,7 @@
     },
     "setupFiles": ["./src/utils/testGlobals.ts"],
     "testRegex": "\\.test\\.(ts|tsx)$",
-    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"],
     "collectCoverageFrom": ["src/**/*.ts"],
     "coveragePathIgnorePatterns": ["/node_modules/", "/@types/"]
   },
