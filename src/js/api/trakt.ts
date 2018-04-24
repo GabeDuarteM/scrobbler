@@ -8,8 +8,11 @@ const options = {
       : "https://api.trakt.tv",
   client_id: traktSecrets.clientId,
   client_secret: traktSecrets.clientSecret,
-  redirect_uri:
-    "chrome-extension://cngpkaebaeagbhgdpbdlokkkpeibomhl/authSuccess.html",
+  redirect_uri: `chrome-extension://${
+    process.env.NODE_ENV === "development"
+      ? "cngpkaebaeagbhgdpbdlokkkpeibomhl"
+      : "icdflblbjnbeheocngdibjbjbfkmpccf"
+  }/authSuccess.html`,
 }
 
 chrome.storage.sync.get("token", val => {
