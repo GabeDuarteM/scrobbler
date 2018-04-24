@@ -2,8 +2,7 @@
   "name": "scrobbler",
   "version": "0.1.0",
   "main": "index.js",
-  "author":
-    "Gabriel Duarte <gabrielqduarte@gmail.com> (https://github.com/GabrielDuarteM/)",
+  "author": "Gabriel Duarte <gabrielqduarte@gmail.com> (https://github.com/GabrielDuarteM/)",
   "license": "MIT",
   "scripts": {
     "cz": "git-cz",
@@ -26,11 +25,23 @@
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "setupFiles": ["./src/utils/testGlobals.ts"],
+    "setupFiles": [
+      "./src/utils/testGlobals.ts"
+    ],
     "testRegex": "\\.test\\.(ts|tsx)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "json"],
-    "collectCoverageFrom": ["src/**/*.ts"],
-    "coveragePathIgnorePatterns": ["/node_modules/", "/@types/"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/@types/"
+    ]
   },
   "resolutions": {
     "@types/tapable": "1.0.2"
@@ -64,5 +75,9 @@
     "typescript": "^2.8.3",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.15"
+  },
+  "devDependencies": {
+    "semantic-release": "^15.1.7",
+    "semantic-release-chrome": "^1.0.1"
   }
 }
