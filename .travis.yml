@@ -3,3 +3,5 @@ node_js:
   - node
 script:
   - yarn ci
+after_success:
+  - yarn release

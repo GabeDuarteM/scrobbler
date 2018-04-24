@@ -2,7 +2,8 @@
   "name": "scrobbler",
   "version": "0.1.0",
   "main": "index.js",
-  "author": "Gabriel Duarte <gabrielqduarte@gmail.com> (https://github.com/GabrielDuarteM/)",
+  "author":
+    "Gabriel Duarte <gabrielqduarte@gmail.com> (https://github.com/GabrielDuarteM/)",
   "license": "MIT",
   "scripts": {
     "cz": "git-cz",
@@ -14,7 +15,8 @@
     "lint": "yarn tslint -p tsconfig.json -t code-frame",
     "lint:fix": "yarn lint --fix",
     "test:cov": "jest --coverage",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "release": "semantic-release"
   },
   "config": {
     "commitizen": {
@@ -25,23 +27,11 @@
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "setupFiles": [
-      "./src/utils/testGlobals.ts"
-    ],
+    "setupFiles": ["./src/utils/testGlobals.ts"],
     "testRegex": "\\.test\\.(ts|tsx)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.ts"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/@types/"
-    ]
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"],
+    "collectCoverageFrom": ["src/**/*.ts"],
+    "coveragePathIgnorePatterns": ["/node_modules/", "/@types/"]
   },
   "resolutions": {
     "@types/tapable": "1.0.2"
