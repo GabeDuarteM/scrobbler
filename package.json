@@ -25,6 +25,9 @@
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
+    "setupFiles": [
+      "./src/utils/testGlobals.ts"
+    ],
     "testRegex": "\\.test\\.(ts|tsx)$",
     "moduleFileExtensions": [
       "ts",
