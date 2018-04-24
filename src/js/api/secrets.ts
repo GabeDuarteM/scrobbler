@@ -1,10 +1,5 @@
 export const trakt = {
-  clientId:
-    process.env.NODE_ENV === "development"
-      ? "YourStagingClientId"
-      : "YourProdClientId",
+  clientId: "0f5116c99d54c31d982986186a493409a50bb065306b1ade4876633c52641b46",
   clientSecret:
-    process.env.NODE_ENV === "development"
-      ? "YourStagingSecret"
-      : "YourProdClientSecret",
+    "c70d2fd0247c10058371adbcd6065f1557bcdab3d821515a992156c1ec66f85a",
 }
