@@ -55,7 +55,7 @@
     "rimraf": "^2.6.2",
     "trakt.tv": "^6.0.2",
     "ts-jest": "^22.4.4",
-    "ts-loader": "^4.2.0",
+    "ts-loader": "^4.4.2",
     "ts-node": "^6.0.0",
     "tslint": "^5.9.1",
     "tslint-config-prettier": "^1.12.0",
