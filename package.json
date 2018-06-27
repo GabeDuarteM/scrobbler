@@ -43,7 +43,7 @@
     "@types/lodash": "^4.14.107",
     "@types/source-map": "0.5.2",
     "@types/webpack": "^4.1.3",
-    "commitizen": "^2.9.6",
+    "commitizen": "^2.10.1",
     "concurrently": "^3.5.1",
     "copy-webpack-plugin": "^4.5.1",
     "cpx": "^1.5.0",
