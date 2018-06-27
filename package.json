@@ -50,7 +50,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "fork-ts-checker-webpack-plugin": "^0.4.1",
     "jest": "^22.4.3",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.10",
     "prettier": "^1.12.1",
     "rimraf": "^2.6.2",
     "trakt.tv": "^6.0.2",
