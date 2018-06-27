@@ -37,7 +37,7 @@
     "@types/tapable": "1.0.2"
   },
   "dependencies": {
-    "@types/chrome": "^0.0.64",
+    "@types/chrome": "^0.0.69",
     "@types/copy-webpack-plugin": "^4.4.1",
     "@types/jest": "^22.2.3",
     "@types/lodash": "^4.14.107",
