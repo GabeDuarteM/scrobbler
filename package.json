@@ -51,7 +51,7 @@
     "fork-ts-checker-webpack-plugin": "^0.4.1",
     "jest": "^22.4.3",
     "lodash": "^4.17.5",
-    "prettier": "^1.12.1",
+    "prettier": "^1.13.7",
     "rimraf": "^2.6.2",
     "trakt.tv": "^6.0.2",
     "ts-jest": "^22.4.4",
