@@ -67,7 +67,7 @@
     "webpack-cli": "^2.0.15"
   },
   "devDependencies": {
-    "semantic-release": "^15.1.7",
+    "semantic-release": "^15.6.3",
     "semantic-release-chrome": "^1.0.1"
   }
 }
