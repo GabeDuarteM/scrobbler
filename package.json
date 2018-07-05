@@ -39,7 +39,7 @@
   "dependencies": {
     "@types/chrome": "^0.0.64",
     "@types/copy-webpack-plugin": "^4.4.1",
-    "@types/jest": "^22.2.3",
+    "@types/jest": "^23.1.4",
     "@types/lodash": "^4.14.107",
     "@types/source-map": "0.5.2",
     "@types/webpack": "^4.1.3",
