@@ -26,6 +26,7 @@ const convertAbsoluteToSeasonNumbering = async (
 }
 
 let currentWatchingVideo: IWatchingVideo | null
+// tslint:disable-next-line no-floating-promises
 ;(async () => {
   try {
     const video = document.querySelector(".html5-video-container video")

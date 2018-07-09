@@ -107,6 +107,7 @@ class Api {
   ) => {
     const series = await trakt.search.text({ query: name, type: "show" })
     const ids: IIds = series[0].show.ids
+    const epNotFoundMsg = "Episode not found"
 
     const seasonsDenormalized: ReadonlyArray<
       ISeason
@@ -128,13 +129,15 @@ class Api {
       const epNumber = episodeNumber - totalEpisodesBeforeCurrSeason
       const episode = season.episodes.find(x => x.number === epNumber)
       if (episode === undefined) {
-        throw error("Episode not found")
+        error(epNotFoundMsg)
+
+        throw new Error(epNotFoundMsg)
       }
 
       return episode
     }
 
-    throw error("Episode not found")
+    throw new Error(epNotFoundMsg)
   }
 
   private readonly normalizeSeasons = (seasons: ReadonlyArray<ISeason>) =>

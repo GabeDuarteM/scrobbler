@@ -10,7 +10,7 @@ export interface IIds {
 export interface IEpisode {
   readonly season: number
   readonly number: number
-  readonly title: string
+  readonly title?: string | null
   readonly ids: IIds
   readonly number_abs?: number
   readonly overview: string
