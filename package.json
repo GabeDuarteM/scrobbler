@@ -2,11 +2,13 @@
   "name": "scrobbler",
   "version": "0.1.0",
   "main": "index.js",
-  "author": "Gabriel Duarte <gabrielqduarte@gmail.com> (https://github.com/GabrielDuarteM/)",
+  "author":
+    "Gabriel Duarte <gabrielqduarte@gmail.com> (https://github.com/GabrielDuarteM/)",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "webpack --mode production",
+    "prebuild:dev": "rimraf dist",
     "build:dev": "webpack --mode development",
     "ci": "yarn lint && yarn test:cov && yarn build",
     "start": "yarn build:dev -w",
@@ -20,23 +22,11 @@
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "setupFiles": [
-      "./src/utils/testGlobals.ts"
-    ],
+    "setupFiles": ["./src/utils/testGlobals.ts"],
     "testRegex": "\\.test\\.(ts|tsx)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.ts"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/@types/"
-    ]
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"],
+    "collectCoverageFrom": ["src/**/*.ts"],
+    "coveragePathIgnorePatterns": ["/node_modules/", "/@types/"]
   },
   "dependencies": {
     "lodash": "^4.17.5",

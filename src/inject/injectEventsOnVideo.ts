@@ -39,7 +39,7 @@ const playOrSeek = (
 const getProgress = (video: HTMLVideoElement): number => {
   const fullDurationPercent = 100
   const progress = Math.floor(
-    video.currentTime / video.duration * fullDurationPercent,
+    (video.currentTime / video.duration) * fullDurationPercent,
   )
 
   return progress
