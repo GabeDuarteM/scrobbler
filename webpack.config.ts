@@ -1,3 +1,4 @@
+/* tslint:disable no-implicit-dependencies */
 import * as CopyWebpackPlugin from "copy-webpack-plugin"
 import * as ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin"
 import { join } from "path"
@@ -12,6 +13,9 @@ const baseConfig: webpack.Configuration = {
   },
   externals: {
     electron: "electron",
+  },
+  node: {
+    fs: "empty",
   },
   module: {
     rules: [
