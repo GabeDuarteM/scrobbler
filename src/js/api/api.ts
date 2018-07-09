@@ -1,3 +1,4 @@
+import { IIds, ISeason } from "../../@types/trakt"
 import { error } from "../../utils/logger"
 import { trakt } from "./trakt"
 
@@ -89,6 +90,59 @@ class Api {
     }
   }
 
+  public readonly getEpisodeStandard = async (
+    id: string,
+    season: number,
+    episode: number,
+  ) =>
+    trakt.episodes.summary({
+      id,
+      episode,
+      season,
+    })
+
+  public readonly getEpisodeAbsolute = async (
+    name: string,
+    episodeNumber: number,
+  ) => {
+    const series = await trakt.search.text({ query: name, type: "show" })
+    const ids: IIds = series[0].show.ids
+
+    const seasonsDenormalized: ReadonlyArray<
+      ISeason
+    > = await trakt.seasons.summary({
+      id: ids.slug,
+      extended: "episodes",
+    })
+    const seasons = this.normalizeSeasons(seasonsDenormalized)
+
+    let totalEpisodeCount = 0
+
+    for (const season of seasons) {
+      totalEpisodeCount += season.episodes.length
+      if (totalEpisodeCount < episodeNumber) {
+        continue
+      }
+      const totalEpisodesBeforeCurrSeason =
+        totalEpisodeCount - season.episodes.length
+      const epNumber = episodeNumber - totalEpisodesBeforeCurrSeason
+      const episode = season.episodes.find(x => x.number === epNumber)
+      if (episode === undefined) {
+        throw error("Episode not found")
+      }
+
+      return episode
+    }
+
+    throw error("Episode not found")
+  }
+
+  private readonly normalizeSeasons = (seasons: ReadonlyArray<ISeason>) =>
+    seasons.filter(season => season.number !== 0).map(season => ({
+      ...season,
+      episodes: season.episodes.filter(episode => episode.title !== null),
+    }))
+
   private readonly getVideoToScrobbleTrakt = async (
     name: string,
     season?: number,
@@ -112,7 +166,7 @@ class Api {
 
     const videoToScrobble = {
       ...(video.type === "show"
-        ? await this.getEpisode(
+        ? await this.getEpisodeStandard(
             video.show.ids.slug,
             season as number,
             episode as number,
@@ -122,18 +176,6 @@ class Api {
     }
 
     return videoToScrobble
-  }
-
-  private readonly getEpisode = async (
-    id: string,
-    season: number,
-    episode: number,
-  ) => {
-    return trakt.episodes.summary({
-      id,
-      episode,
-      season,
-    })
   }
 }
 
