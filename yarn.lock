@@ -1273,10 +1273,6 @@ commander@2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
 
-commander@2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.6.0.tgz#9df7e52fb2a0cb0fb89058ee80c3104225f37e1d"
-
 commander@^2.12.1:
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.16.0.tgz#f16390593996ceb4f3eeb020b31d78528f7f8a50"
@@ -1326,19 +1322,19 @@ concat-stream@^1.5.0:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
-concurrently@^3.5.1:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-3.6.0.tgz#c25e34b156a9d5bd4f256a0d85f6192438ae481f"
+concurrently@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-4.0.0.tgz#11f56878fe18ad30128e7827fd47a22d5e51fc62"
   dependencies:
     chalk "^2.4.1"
-    commander "2.6.0"
     date-fns "^1.23.0"
-    lodash "^4.5.1"
-    read-pkg "^3.0.0"
-    rx "2.3.24"
+    lodash "^4.17.10"
+    read-pkg "^4.0.1"
+    rxjs "6.2.2"
     spawn-command "^0.0.2-1"
-    supports-color "^3.2.3"
+    supports-color "^4.5.0"
     tree-kill "^1.1.0"
+    yargs "^12.0.1"
 
 console-browserify@^1.1.0:
   version "1.1.0"
@@ -3606,7 +3602,7 @@ lodash.toarray@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.toarray/-/lodash.toarray-4.4.0.tgz#24c4bfcd6b2fba38bfd0594db1179d8e9b656561"
 
-lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.5.1, lodash@^4.8.0:
+lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.8.0:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
@@ -4659,7 +4655,7 @@ read-pkg@^3.0.0:
     normalize-package-data "^2.3.2"
     path-type "^3.0.0"
 
-read-pkg@^4.0.0:
+read-pkg@^4.0.0, read-pkg@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/read-pkg/-/read-pkg-4.0.1.tgz#963625378f3e1c4d48c85872b5a6ec7d5d093237"
   dependencies:
@@ -4884,9 +4880,11 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rx@2.3.24:
-  version "2.3.24"
-  resolved "https://registry.yarnpkg.com/rx/-/rx-2.3.24.tgz#14f950a4217d7e35daa71bbcbe58eff68ea4b2b7"
+rxjs@6.2.2:
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.2.2.tgz#eb75fa3c186ff5289907d06483a77884586e1cf9"
+  dependencies:
+    tslib "^1.9.0"
 
 rxjs@^6.1.0:
   version "6.2.1"
@@ -5353,11 +5351,17 @@ supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
 
-supports-color@^3.1.2, supports-color@^3.2.3:
+supports-color@^3.1.2:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-3.2.3.tgz#65ac0504b3954171d8a64946b2ae3cbb8a5f54f6"
   dependencies:
     has-flag "^1.0.0"
+
+supports-color@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.5.0.tgz#be7a0de484dec5c5cddf8b3d59125044912f635b"
+  dependencies:
+    has-flag "^2.0.0"
 
 supports-color@^5.3.0, supports-color@^5.4.0:
   version "5.4.0"
