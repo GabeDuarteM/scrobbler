@@ -46,7 +46,7 @@
     "jest": "^23.3.0",
     "prettier": "^1.12.1",
     "rimraf": "^2.6.2",
-    "semantic-release": "^15.1.7",
+    "semantic-release": "^17.0.0",
     "semantic-release-chrome": "^1.0.1",
     "ts-jest": "^23.0.0",
     "ts-loader": "^4.2.0",
