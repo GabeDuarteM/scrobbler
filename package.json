@@ -33,7 +33,7 @@
     "trakt.tv": "^7.0.0"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.69",
+    "@types/chrome": "^0.0.197",
     "@types/copy-webpack-plugin": "^4.4.1",
     "@types/jest": "^23.1.4",
     "@types/lodash": "^4.14.107",
